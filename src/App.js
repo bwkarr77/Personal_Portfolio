@@ -8,6 +8,7 @@ import UserCard from "./components/UserCard";
 import { useGetInfo } from "./components/ApiContent";
 import { Route } from "react-router-dom";
 import NavBar from "./pageContents/NavBar";
+import RoutePath from "./utils/RoutePath";
 
 const baseUrl = "https://api.github.com/users/";
 const navBarItems = [
@@ -18,7 +19,6 @@ const navBarItems = [
 ];
 
 class App extends React.Component {
-  // baseUrl = "https://api.github.com/users/";
   constructor() {
     super();
     this.state = {
@@ -65,26 +65,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="App-header">
-          <NavBar />
-          {navBarItems.forEach(res =>
-            console.log("create route for each", res)
-          )}
-          <Route
-            exact
-            path={"/"}
-            render={props => {
-              console.log("/", props);
-              // return <Charts coinData={coinData}/>;
-            }}
-          />
-          <Route
-            exact
-            path={"/AboutMe"}
-            render={props => {
-              console.log("AboutMe", props);
-              // return <Charts coindata={coinData} displayVal={"bitcoin"} />;
-            }}
-          />
+          <NavBar routeInfo={navBarItems} />
+          {/* <RoutePath address={navBarItems} /> */}
           <h2>GITHUB USER CARDS</h2>
           <section className="card-content">
             <UserCard user={this.state.userData} />

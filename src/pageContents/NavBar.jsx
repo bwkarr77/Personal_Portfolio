@@ -13,9 +13,9 @@ const NavBar = () => {
       <h2>NavBar</h2>
       <div className="navbar-items">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/BitCoin">BitCoin</NavLink>
-        <NavLink to="/">Ethereum</NavLink>
-        <NavLink to="/">XRP</NavLink>
+        <NavLink to="/AboutMe">About Me</NavLink>
+        <NavLink to="/GithubCards">Github Usercards</NavLink>
+        <NavLink to="/Projects">Projects</NavLink>
       </div>
       <div className="dark-mode__toggle">
         <div
